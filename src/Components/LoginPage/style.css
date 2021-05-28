@@ -1,0 +1,15 @@
+* {
+  margin: 2px;
+}
+
+.loginpage {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginform {
+  width: 400px;
+  margin: 10px;
+}
