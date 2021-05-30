@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import { useHistory } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -9,6 +9,12 @@ import RouteGuard from "../../Guard";
 
 function Dasboard() {
   const history = useHistory();
+
+  function useQuery() {
+    return new URLSearchParams(useLocation().search);
+  }
+  
+  let query = useQuery();
 
   useEffect(() => {
     toast.success("login successful!", {
@@ -30,7 +36,7 @@ function Dasboard() {
   return (
     <div>
       <Navbar bg="light" expand="lg">
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand href="#home">Hi {query.get("uname")}</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
