@@ -13,3 +13,18 @@
   width: 400px;
   margin: 10px;
 }
+
+.formbtn{
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-item1{
+  width: 70px;
+  align-self: flex-end;
+}
+
+.flex-item2{
+  align-self: center;
+}
+
