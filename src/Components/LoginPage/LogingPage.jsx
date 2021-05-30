@@ -3,7 +3,7 @@ import React, { useEffect, useCallback } from "react";
 import { Form, Button } from "react-bootstrap";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useHistory, useLocation } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 
 import "./style.css";
 
@@ -81,9 +81,12 @@ export default function LogingPage() {
             <Form.Label>Password</Form.Label>
             <Form.Control name="pass" type="password" placeholder="Password" />
           </Form.Group>
-          <Button variant="primary" type="submit">
-            Submit
+          <div className="formbtn">
+          <Button variant="primary" type="submit" className="flex-item1">
+            LogIn
           </Button>
+          <Link to="/regpage" className="flex-item2">SingUp</Link>
+          </div>
         </Form>
       </div>
       <ToastContainer />

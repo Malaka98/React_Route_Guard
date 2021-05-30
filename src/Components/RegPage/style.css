@@ -1,0 +1,21 @@
+.regpage {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 10px;
+}
+
+.form {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-flex-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
